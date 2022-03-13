@@ -3,6 +3,34 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
+			"label": "C/C++: cl.exe build active file",
+			"command": ".\\.vscode\\build.bat",
+			"args": [
+				"${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
+
+
+// Old config to build source using gcc
+/*
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
 			"label": "C/C++: g++.exe build active file",
 			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
 			"args": [
@@ -28,3 +56,4 @@
 		}
 	]
 }
+*/
