@@ -1,10 +1,22 @@
-#include<iostream>
-
+#include <iostream>
 #include "source.hh"
 
 using namespace std;
 
+
+//=================================//
+// Global structures definitons    //
+//=================================//
+
 int gTime = 0;
+
+// create a global heap
+class Heap eventsHeap;
+
+
+//=================================//
+// Functions                       //
+//=================================//
 
 int getCurrTick()
 {
@@ -12,35 +24,34 @@ int getCurrTick()
     return gTime;
 }
 
-// create a global heap
-class Heap eventsHeap;
-
 int main()
 {
        
     int counterid = 0;
-    class Simulator* simulator = new Simulator();
+    class Simulator* sim = new Simulator();
 
-    simulator->setHeap(&eventsHeap);
-    
+    sim->setHeap(&eventsHeap);
 
-    simulator->insert(new Event(1, 0));
+    sim->insert(new Event(1, 0));
 
     /*
     for(int i = 0; i < 10; i++)
     {
-        simulator->insert(new Event( counterid++, getCurrTick() ));
+        sim->insert(new Event( counterid++, getCurrTick() ));
     }
     */
-    simulator->doAllEvents();
+    sim->doAllEvents();
 
-
-
-    delete simulator;
+   
    // priority_queue< int, vector<int>, greater<int> > basicheap;
 
 
 //    basicheap.push(10);
 
   //  std::cout << basicheap.top() << endl;
+
+    // delete sim object
+    delete sim;
+
+    return;
 }

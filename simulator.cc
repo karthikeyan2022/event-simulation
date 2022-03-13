@@ -7,9 +7,13 @@ class Heap* eventHeap = nullptr;
 
 void Simulator::setHeap(class Heap* heap)
 {
-    if(!eventHeap)
+    if(eventHeap == nullptr)
     {
         eventHeap = heap;
+    }
+    else
+    {
+        fprintf(stderr, "error in assigning heap object in function: %s", __func__);
     }
 }
 
