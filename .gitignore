@@ -38,6 +38,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+!.vscode/build.bat
 
 # Ignore VS Build tools generated files
 *pdb
