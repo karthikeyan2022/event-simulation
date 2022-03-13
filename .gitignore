@@ -31,6 +31,7 @@
 *.out
 *.app
 
+# VS code generated files
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -38,8 +39,14 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-# Local History for Visual Studio Code
-.history/
+# Ignore VS Build tools generated files
+*pdb
+*ilk
+*exe
+*obj
 
-# Built Visual Studio Code Extensions
-*.vsix
+# Ignore VIM generated temp files
+*~
+
+*.swp
+*.swo
